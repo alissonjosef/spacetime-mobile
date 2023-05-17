@@ -1,11 +1,17 @@
 import { StatusBar } from 'expo-status-bar'
-import { Text, View } from 'react-native'
+import { ImageBackground, Text } from 'react-native'
+
+import BgBlur from './src/assets/bg-blur.png'
 
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-gray-950">
-      <Text className="text-5xl font-bold text-zinc-50">Rocketseat 1</Text>
+    <ImageBackground
+      source={BgBlur}
+      className="relative flex-1 items-center bg-gray-900"
+      imageStyle={{ position: 'absolute', left: '-100%' }}
+    >
+      <Text className="font-regular text-5xl text-gray-50"></Text>
       <StatusBar style="light" translucent />
-    </View>
+    </ImageBackground>
   )
 }
